@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0; 
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body::before {
+  content: "";
+  background-image: linear-gradient(0deg, #1b1c3166 0%, #16385f66 100%), url(https://cdn.pixabay.com/photo/2021/10/11/17/54/technology-6701504_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;           /* Ensure the image covers the entire area */
+  background-position: center;      /* Center the background image */
+  position: fixed;                  /* Use fixed positioning */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;                     /* Keep it behind other content */
+}
+
+#title, #description {
+  text-align: center;
+  color: #ebf8fb;
+}
+
+#survey-form {
+  background: #173459BF;
+  width: 90%;                     /* Change width to a percentage for responsiveness */
+  max-width: 600px;              /* Set a maximum width */
+  height: auto;                  /* Changed to auto to fit content */
+  min-height: 400px;             /* Set a minimum height to ensure visibility */
+  border-radius: 35px;
+  position: relative;
+  margin: 60px auto;
+  padding: 20px 10px;                 /* Add some padding for better spacing */
+}
+
+label {
+  color: #fff;                    /* Ensure label text is white */
+  font-size: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;                   /* Full width for all input elements */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;               /* Set a consistent font size */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;             /* Space between input and label */
+}
+
+/* Flexbox for radio buttons */
+.radio-group {
+  display: flex;                  /* Use Flexbox for alignment */
+  align-items: center;           /* Center align items vertically */
+  margin-bottom: 10px;           /* Add space between each radio group */
+}
+
+/* Flexbox for checkbox buttons */
+.checkbox-group {
+  display: flex;                  /* Use Flexbox for alignment */
+  align-items: center;           /* Center align items vertically */
+  margin-bottom: 10px;           /* Add space between each checkbox group */
+}
+
+/* Dropdown styles */
+select {
+  font-family: 'Arial', sans-serif; /* Change this to your desired font */
+  font-size: 16px;                  /* Adjust font size */
+  color: #fff;                      /* Text color */
+  background-color: #1a1a2e;        /* Background color for the dropdown */
+  border: 1px solid #4d4d4d;        /* Border color */
+  border-radius: 5px;               /* Rounded corners */
+  padding: 10px;                    /* Padding inside the dropdown */
+  cursor: pointer;                  /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+select:focus {
+  background-color: #16222e; /* Darker color on focus for better contrast */
+  outline: none;              /* Remove default outline */
+}
+
+/* Option styles */
+option {
+  font-family: 'Arial', sans-serif; /* Ensure options have the same font */
+  background-color: #1a1a2e;        /* Same background color */
+  color: #fff;                      /* Text color */
+}
+
+option:checked {
+  background-color: #4d4d4d;        /* Background color when selected */
+  color: #fff;                      /* Ensure the text remains white */
+}
+
+button {
+  background-color: #4CAF50;       /* Green background */
+  color: white;                    /* White text */
+  padding: 15px 30px;              /* Increased padding for a larger button */
+  border: none;                    /* No border */
+  border-radius: 5px;              /* Rounded corners */
+  cursor: pointer;                  /* Pointer cursor on hover */
+  font-size: 18px;                  /* Increased font size */
+  transition: background-color 0.3s; /* Transition effect */
+  display: block;                  /* Make button a block element */
+  margin: 20px auto;               /* Center the button with margin */
+  width: 50%;                      /* Optional: Set a width to control size */
+  text-align: center;              /* Center text inside button */
+}
+
+button:hover {
+  background-color: #45a049;       /* Darker green on hover */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  #survey-form {
+      width: 95%;                 /* Slightly larger width on smaller screens */
+      padding: 15px;             /* Adjust padding */
+      min-height: 300px;         /* Adjust minimum height for smaller screens */
+  }
+  button {
+      width: 100%;               /* Make button full width on small screens */
+      padding: 10px;             /* Adjust button padding */
+  }
+}
